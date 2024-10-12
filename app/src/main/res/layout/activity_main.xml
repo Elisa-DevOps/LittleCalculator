@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/TVsolOutput"
+        android:id="@+id/textViewSoluOutput"
         android:layout_width="360dp"
         android:layout_height="99dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="26dp"
-        android:gravity="right|center"
-        android:text="0.00"
+        android:gravity="end|center"
+        android:text="@string/initializedSolutionOutputText"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +25,28 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="56dp"
-        android:text="="
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="162dp"
+        android:onClick="handleButton"
+        android:text="@string/buttonEqualsText"
         android:textSize="44sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSoluOutput" />
+
+    <EditText
+        android:id="@+id/editTextNumDeci"
+        android:layout_width="210dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints="number"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

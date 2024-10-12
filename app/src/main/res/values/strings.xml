@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LIttle Calculator</string>
+    <string name="buttonEqualsText">=</string>
+    <string name="initializedSolutionOutputText">0.00</string>
 </resources>
