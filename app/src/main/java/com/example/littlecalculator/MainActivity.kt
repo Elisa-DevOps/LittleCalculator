@@ -1,3 +1,7 @@
+//Project: Little Calculator
+//Purpose: A little calculator app that can add and subtract two numbers
+//Author: Elisa Aldridge
+
 package com.example.littlecalculator
 
 import android.os.Bundle
