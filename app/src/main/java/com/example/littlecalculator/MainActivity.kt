@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -28,20 +30,28 @@ class MainActivity : AppCompatActivity() {
         val textViewSoluOutput = findViewById<TextView>(R.id.textViewSoluOutput)
 
         val numDeci = editTextNumDeci.text.toString().toDoubleOrNull()
-        if (numDeci != null) {
-            val solu = calculateSolution(numDeci)
-            textViewSoluOutput.text = solu.toString()
-        } else {
-            textViewSoluOutput.text = "Invalid input"
-        }
+        val soluDeci = textViewSoluOutput.text.toString().toDoubleOrNull()
 
+            if (numDeci != null) {
+                val solu = calculateSolution(numDeci, soluDeci)
+                textViewSoluOutput.text = solu.toString()
+            } else {
+                textViewSoluOutput.text = "Invalid input"
+            }
     }
 
-    private fun calculateSolution(numDeci: Double): Any {
-        var solu = 0.0
-        for (i in 1..numDeci.toInt()) {
-            solu += 1.0 / i
-        }
+    private fun calculateSolution(numDeci: Double?, soluDeci: Double?): Double {
+        val plusRadioButton = findViewById<RadioButton>(R.id.plusRadioButton)
+        val minusRadioButton = findViewById<RadioButton>(R.id.minusRadioButton)
+
+        var solu = numDeci!!
+
+            if (plusRadioButton.isChecked) {
+                solu = soluDeci!! + numDeci
+            } else if (minusRadioButton.isChecked) {
+                solu = soluDeci!! - numDeci
+            }
         return solu
     }
+
 }
