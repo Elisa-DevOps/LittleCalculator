@@ -7,4 +7,5 @@
     <string name="minusRadioButton">-</string>
     <string name="multiplyRadioButton">x</string>
     <string name="divideRadioButton">/</string>
+    <string name="invalid_input">Invalid input</string>
 </resources>
