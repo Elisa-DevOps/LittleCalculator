@@ -1,5 +1,5 @@
 //Project: Little Calculator
-//Purpose: A little calculator app that can add and subtract two numbers
+//Purpose: A little calculator app that can add, multiply, divide, or subtract two numbers
 //Author: Elisa Aldridge
 
 package com.example.littlecalculator
