@@ -5,7 +5,7 @@
     <string name="enter_number">Enter Number</string>
     <string name="plusRadioButton">+</string>
     <string name="minusRadioButton">-</string>
-    <string name="multiplyRadioButton">x</string>
+    <string name="multiplyRadioButton">*</string>
     <string name="divideRadioButton">/</string>
     <string name="invalid_input">Invalid input</string>
 </resources>

@@ -5,6 +5,7 @@
 package com.example.littlecalculator
 
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun handleButton() {
+    fun handleButton(view: View) {
         val editTextNumDeci = findViewById<EditText>(R.id.editTextNumDeci)
         val textViewSoluOutput = findViewById<TextView>(R.id.textViewSoluOutput)
 
@@ -49,11 +50,11 @@ class MainActivity : AppCompatActivity() {
 
         var solu = numDeci!!
 
-            if (plusRadioButton.isChecked) {
-                solu = soluDeci!! + numDeci
-            } else if (minusRadioButton.isChecked) {
-                solu = soluDeci!! - numDeci
-            } else if (multiplyRadioButton.isChecked) {
+        if (plusRadioButton.isChecked) {
+            solu = soluDeci!! + numDeci
+        } else if (minusRadioButton.isChecked) {
+            solu = soluDeci!! - numDeci
+        } else if (multiplyRadioButton.isChecked) {
                 solu = soluDeci!! * numDeci
             } else if (divideRadioButton.isChecked) {
                 solu = soluDeci!! / numDeci
