@@ -8,4 +8,6 @@
     <string name="multiplyRadioButton">*</string>
     <string name="divideRadioButton">/</string>
     <string name="invalid_input">Invalid input</string>
+    <string name="clear">clear</string>
+    <string name="little_calculator_logo">Little Calculator Logo</string>
 </resources>

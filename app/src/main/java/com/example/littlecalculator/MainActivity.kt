@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -55,11 +56,19 @@ class MainActivity : AppCompatActivity() {
         } else if (minusRadioButton.isChecked) {
             solu = soluDeci!! - numDeci
         } else if (multiplyRadioButton.isChecked) {
-                solu = soluDeci!! * numDeci
+            solu = soluDeci!! * numDeci
         } else if (divideRadioButton.isChecked) {
             solu = soluDeci!! / numDeci
         }
         return solu
     }
 
+    fun handleClearButton(view: View) {
+        val x = findViewById<RadioGroup>(R.id.radioGroup)
+        x.clearCheck()
+        val y = findViewById<EditText>(R.id.editTextNumDeci)
+        y.text.clear()
+        val z = findViewById<TextView>(R.id.textViewSoluOutput)
+        z.text = getString(R.string.initializedSolutionOutputText)
+    }
 }
