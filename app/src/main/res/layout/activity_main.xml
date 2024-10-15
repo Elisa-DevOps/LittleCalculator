@@ -111,6 +111,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/little_calculator_logo" />
+        app:srcCompat="@drawable/little_calculator_logo_cropped" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

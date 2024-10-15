@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
             solu = soluDeci!! - numDeci
         } else if (multiplyRadioButton.isChecked) {
                 solu = soluDeci!! * numDeci
-            } else if (divideRadioButton.isChecked) {
-                solu = soluDeci!! / numDeci
-            }
+        } else if (divideRadioButton.isChecked) {
+            solu = soluDeci!! / numDeci
+        }
         return solu
     }
 
