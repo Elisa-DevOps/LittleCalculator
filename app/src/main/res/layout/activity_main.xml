@@ -128,4 +128,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/little_calculator_logo_cropped" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/button.color"
+        android:clickable="true"
+        android:contentDescription="@string/fab"
+        android:focusable="true"
+        app:srcCompat="@drawable/baseline_info_24"
+        android:onClick="handleFabButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

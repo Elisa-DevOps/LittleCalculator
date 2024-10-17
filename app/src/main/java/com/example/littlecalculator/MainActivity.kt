@@ -15,6 +15,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,5 +75,12 @@ class MainActivity : AppCompatActivity() {
         y.text.clear()
         val z = findViewById<TextView>(R.id.textViewSoluOutput)
         z.text = getString(R.string.initializedSolutionOutputText)
+    }
+
+    fun handleFabButton(view: View) {
+        val fab = findViewById<View>(R.id.floatingActionButton)
+        fab.setOnClickListener {
+            view -> Snackbar.make(view, getString(R.string.fab), Snackbar.LENGTH_LONG).setAction("Action", null).show()
+        }
     }
 }
